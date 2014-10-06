@@ -1,0 +1,48 @@
+{
+  "name": "grunt-ui-docs",
+  "description": "Styleguide Generator for UI Components",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vieron/grunt-ui-docs",
+  "author": {
+    "name": "vieron",
+    "email": "javiersanchezmarin@gmail.com",
+    "url": "http://vieron.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vieron/grunt-ui-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vieron/grunt-ui-docs/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/vieron/grunt-ui-docs/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "ui-docs": "0.0.0",
+    "serve-static": "^1.4.3",
+    "connect": "^3.1.0",
+    "underscore": "^1.6.0"
+  }
+}

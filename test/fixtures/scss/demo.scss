@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+body, input, textarea, button, fieldset, legend {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+
+
+/*
+ * Components
+ *
+ * Lorem ipsum Amet adipisicing aliqua labore irure in ut culpa pariatur pariatur
+ * minim ut commodo in ullamco proident est aliqua enim velit irure consequat
+ * nostrud qui magna esse laborum reprehenderit nisi eiusmod aute dolor ut
+ * reprehenderit sit in ut sunt sint.
+ *
+ * @id components
+ */
+
+
+
+
+/**
+ * Button
+ *
+ * Lorem ipsum Amet adipisicing aliqua labore irure in ut culpa pariatur pariatur
+ * minim ut commodo in ullamco proident est aliqua enim velit irure consequat
+ * nostrud qui magna esse laborum reprehenderit nisi eiusmod aute dolor ut
+ * reprehenderit sit in ut sunt sint.
+ *
+ * - Lorem ipsum Amet adipisicing aliqua labore irure in ut culpa pariatur pariatur
+ * minim ut commodo in ullamco proident est aliqua enim velit irure consequat
+ * nostrud qui magna esse laborum reprehenderit nisi eiusmod aute dolor ut
+ * reprehenderit sit in ut sunt sint.
+ * - Lorem ipsum dolor sit amet
+ * - Lorem ipsum dolor sit amet
+ *   - Lorem ipsum dolor sit amet
+ *   - Lorem ipsum dolor sit amet
+ *
+ * Lorem ipsum Qui nostrud esse amet in cupidatat Ut Duis officia esse fugiat
+ * laboris Duis ut ea velit incididunt irure est Ut culpa cupidatat officia magna
+ * qui exercitation amet in mollit dolore ad exercitation anim minim ut sit aute
+ * veniam quis Duis.
+ *
+ *      <a class="Btn {{classes}}"><span>Button</span></a>
+ *      <a class="Btn {{classes}}"><span>Button</span></a>
+ *      <a class="Btn {{classes}}"><span>Button</span></a>
+ *
+ * Lorem ipsum Qui nostrud esse amet in cupidatat Ut Duis officia esse fugiat
+ * laboris Duis ut ea velit incididunt irure est Ut culpa cupidatat officia magna
+ * qui exercitation amet in mollit dolore ad exercitation anim minim ut sit aute
+ * veniam quis Duis.
+ *
+ * @state :hover
+ * @state :active
+ * @state .js-isActive Lorem ipsum dolor sit amet
+ * @state .js-isLoading Lorem ipsum dolor sit amet
+ *
+ * @modifier .Btn--success Lorem ipsum dolor sit amet
+ * @modifier .Btn--cancel Lorem ipsum dolor sit amet
+ *
+ * @snippet
+ * <a class="Btn {{classes}}"><span>Button</span></a>
+ *
+ * @id components.button
+ */
+
+.Btn {
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    background-color: #DDD;
+    overflow: hidden;
+    color: #999;
+    padding: 0.2em 1em 0.4em;
+    cursor: pointer;
+    outline: 0px;
+    line-height: 1.6em;
+    vertical-align: middle;
+    font-size: 16px;
+
+    > * {
+        display: inline-block;
+        vertical-align: middle !important;
+        line-height: 1;
+    }
+
+
+    &:hover,
+    &.js-isLoading {
+        background-color: blue;
+        color: #FFF;
+    }
+
+    &:active,
+    &.js-isActive {
+        background-color: lighten(blue, 20);
+        color: #FFF;
+        position: relative;
+        top: 1px;
+    }
+
+    &.js-isLoading {
+        cursor: no-drop;
+        opacity: 0.2;
+
+        span {
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        background-color: blue;
+        border: 2px solid black;
+    }
+}
+
+.Btn--success {
+    background-color: green;
+    color: #FFF;
+
+    &:hover {
+        background-color: lighten(green, 8);
+    }
+}
+
+.Btn--cancel {
+    background-color: red;
+    color: #FFF;
+
+    &:hover {
+        background-color: lighten(red, 14);
+    }
+}
+
+
+
+/**
+ * Button with icon
+ *
+ * Lorem ipsum **dolor** sit amet {{link_to 'components.button'}}
+ *
+ *
+ * @snippet
+ * <!-- wadus comment -->
+ * <a class="Btn {{classes}}">
+ *     {{use 'components.icon Ico-gear'}}
+ *      <span>Button</span>
+ * </a>
+ * <!-- wadus comment -->
+ * <button class="Btn {{classes}}">
+ *     {{use 'components.icon Ico-edit'}}
+ *      <span>Button</span>
+ * </button>
+ *
+ * @id components.button.icon
+ */
+
+
+
+
+/**
+ * Icon
+ *
+ * Lorem ipsum **dolor** sit amet [asd](http://google.es)
+ *
+ * @modifier .Ico-gear
+ * @modifier .Ico-edit
+ * @modifier .Ico-user
+ * @modifier .Ico-delete
+ *
+ * @snippet
+ * <i class="Ico {{classes}}"></i>
+ *
+ * @id components.icon
+ */
+
+.Ico {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: #DDD;
+}
+
+.Ico-gear, .Ico-edit, .Ico-user, .Ico-delete {
+    background: #333;
+}
+
+
+
+
+/**
+ * Button Group
+ *
+ * Lorem ipsum **dolor** sit amet [asd](http://google.es)
+ *
+ * @state .js-isFixed Lorem ipsum dolor sit amet
+ *
+ * @modifier .BtnGroup--compact Lorem ipsum dolor sit amet
+ *
+ * @snippet
+ * <div class="BtnGroup {{classes}}">
+ *     {{#repeat 4}} {{use 'components.button'}} {{/repeat}}
+ * </div>
+ *
+ * @id components.buttonGroup
+ */
+
+.BtnGroup {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+
+    .Btn {
+        margin-right: 10px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+}
+
+
+.BtnGroup--compact {
+   .Btn {
+        margin-right: 0;
+        border-radius: 0;
+        border-left: 1px solid rgba(#000, 0.2);
+
+        &:first-child {
+           border-top-left-radius: 3px;
+           border-bottom-left-radius: 3px;
+           border-left: none;
+        }
+
+        &:last-child {
+           border-top-right-radius: 3px;
+           border-bottom-right-radius: 3px;
+        }
+   }
+
+}
+
+
+
+
+/**
+ * Typography
+ *
+ * Lorem ipsum dolor sit amet
+ *
+ * @snippet
+ * <a class="button {{classes}}">Send!</a>
+ *
+ * @id typography
+ */
+
+
+
+
+/**
+ * Headings
+ *
+ * Lorem ipsum dolor sit amet
+ *
+ * @snippet
+ * <a class="button {{classes}}">Send!</a>
+ *
+ * @id typography.headings
+ */
+
+
+
+
+/**
+ * Links
+ *
+ * Lorem ipsum **dolor** sit amet [asd](http://google.es)
+ *
+ * @snippet
+ * <a class="button {{classes}}">Send!</a>
+ *
+ * @id typography.headings.links
+ */
