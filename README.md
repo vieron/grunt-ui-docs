@@ -8,13 +8,13 @@ This plugin requires Grunt `~0.4.5`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-cssdocs --save-dev
+npm install grunt-ui-docs --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-cssdocs');
+grunt.loadNpmTasks('grunt-ui-docs');
 ```
 
 ## The "ui_docs" task
@@ -26,14 +26,12 @@ In your project's Gruntfile, add a section named `ui_docs` to the data object pa
 grunt.initConfig({
   ui_docs: {
     mydocs: {
-      title: 'css-docs',
-      docsPath: 'docs/styleguide/',
+      title: 'css-docs', // documentation page title
+      docsPath: 'docs/styleguide/', // path where you want to generate the styleguide
       docsAssetsPath: 'assets/', // relative to docsPath
       docsUIDocsAssetsPath: 'css-docs/', // relative to docsAssetsPath
-      templatePath: path.join(__dirname, '../template/'),
 
-      rawAssetsDir: 'assets/',
-      extrasPath: 'docs/extras/',
+      rawAssetsDir: 'assets/', // path to the assets you want to document
 
       js: {
           rawDir: 'js/', // relative to rawAssetsDir
@@ -44,13 +42,16 @@ grunt.initConfig({
           rawDir: 'scss/', // relative to rawAssetsDir
           validExtensions: ['.scss', '.css', '.sass', '.styl', '.less'],
           ignore: ['**/bourbon/**'],
-          builtFilePath: 'assets/css/built.css',
+          builtFilePath: 'dist/css/built.css', // path to the generated sass file(s)
           outputDir: 'css/' // relative to rawAssetsDir
       }
     }
   }
 });
 ```
+
+## Examples & options
+Since this is a wrapper for [ui-docs](https://github.com/vieron/ui-docs), you can see the [example section](https://github.com/vieron/ui-docs#example) there.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
