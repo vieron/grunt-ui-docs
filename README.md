@@ -49,9 +49,7 @@ grunt.initConfig({
   }
 });
 ```
-
-## Examples & options
-Since this is a wrapper for [ui-docs](https://github.com/vieron/ui-docs), you can see the [example section](https://github.com/vieron/ui-docs#example) there.
+**grunt-ui-docs** is only a grunt adapter for [ui-docs](https://github.com/vieron/ui-docs), check the [complete list of configuration options](https://github.com/vieron/ui-docs#options) and some [examples](https://github.com/vieron/ui-docs#example) about its usage.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
