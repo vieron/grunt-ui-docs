@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         css: {
             rawDir: 'scss/',
             outputDir: 'css/',
-            builtFilePath: 'test/fixtures/css/built.css'
+            builtFilePaths: ['test/fixtures/css/built.css']
         }
       }
     },
