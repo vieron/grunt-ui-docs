@@ -1,7 +1,7 @@
 {
   "name": "grunt-ui-docs",
   "description": "Styleguide Generator for UI Components",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/vieron/grunt-ui-docs",
   "author": {
     "name": "vieron",
