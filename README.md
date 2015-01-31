@@ -42,7 +42,7 @@ grunt.initConfig({
           rawDir: 'scss/', // relative to rawAssetsDir
           validExtensions: ['.scss', '.css', '.sass', '.styl', '.less'],
           ignore: ['**/bourbon/**'],
-          builtFilePath: 'dist/css/built.css', // path to the generated sass file(s)
+          builtFilePath: ['dist/css/built.css'], // path to the generated sass file(s)
           outputDir: 'css/' // relative to rawAssetsDir
       }
     }
