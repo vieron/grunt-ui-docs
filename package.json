@@ -40,7 +40,7 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "ui-docs": "0.0.0",
+    "ui-docs": "0.0.1",
     "serve-static": "^1.4.3",
     "connect": "^3.1.0",
     "underscore": "^1.6.0"
